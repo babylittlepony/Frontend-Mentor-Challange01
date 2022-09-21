@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
--[live site URL:](https://frontend-mentor-challange01.vercel.app/)
+-Live site URL: [](https://frontend-mentor-challange01.vercel.app/)
 
 ## My process
 
