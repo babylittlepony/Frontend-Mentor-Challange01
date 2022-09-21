@@ -1,0 +1,261 @@
+:root {
+  --Almost-White: hsl(0, 0%, 98%);
+  --Medium-Gray: hsl(0, 0%, 41%);
+  --Almost-Black: hsl(0, 0%, 8%);
+  --bg-opacity-low: hsla(0, 0%, 33%, 0.216);
+}
+
+body {
+  margin: 0s;
+  font-family: "Epilogue", sans-serif;
+  font-size: 1.1rem;
+  max-height: 100%;
+  background-color: var(--Almost-White);
+}
+ul {
+  list-style-type: none;
+  color: var(--Medium-Gray);
+}
+li {
+  display: block;
+  transition-duration: 0.5s;
+}
+li .dropdown {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  margin-top: 1rem;
+  display: none;
+}
+li span {
+  padding-left: 1rem;
+}
+.dropdown li {
+  padding-bottom: 1rem;
+}
+li:hover {
+  cursor: pointer;
+}
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+ul li ul li {
+  clear: both;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  padding: 1rem;
+}
+p {
+  color: var(--Medium-Gray);
+}
+
+nav .icon {
+  margin: 2rem;
+}
+.hero-btn {
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  color: var(--Almost-White);
+  background-color: black;
+  font-weight: bold;
+}
+
+.navbar-menu-toggle {
+  display: block;
+  border: 0;
+  margin-right: 2rem;
+  position: fixed;
+  top: 2rem;
+  right: 0;
+  z-index: 69;
+  width: 2rem;
+  height: 2rem;
+  background: url("./images/icon-menu.svg");
+  background-repeat: no-repeat;
+}
+.navbar-menu-toggle:hover {
+  cursor: pointer;
+}
+.navbar-list span {
+  padding-right: 1rem;
+}
+.left .navbar-list {
+  padding: 5rem 0;
+}
+.left .navbar-list:last-of-type {
+  margin-top: -8rem;
+}
+.right .navbar-list {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  width: 75%;
+}
+.right .navbar-list:last-of-type {
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.desc {
+  margin: 0 1.2rem;
+  text-align: center;
+  line-height: 2rem;
+  margin-bottom: 4.5rem;
+}
+
+.image-hero img {
+  max-width: 375px;
+}
+.hero-client {
+  height: 25vh;
+}
+.hero-client img {
+  width: 55px;
+  padding: 0 1rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 769px) {
+  .navbar-menu {
+    position: fixed;
+    right: 0;
+    inset: 0 0 0 40%;
+    background-color: white;
+    padding: 2rem 0;
+    transform: translateX(100%);
+    transition: transform 200ms ease-in-out;
+    /* display: none; */
+  }
+  .navbar-menu[data-visible="true"] {
+    transform: translateX(0);
+  }
+}
+
+@media only screen and (min-width: 770px) {
+  .navbar-menu-toggle {
+    display: none;
+  }
+  .navbar {
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  li .dropdown {
+    background-color: white;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    box-shadow: 0 0 20px 5px rgba(28, 27, 27, 0.124);
+  }
+
+  .left {
+    padding-right: 1.2rem;
+  }
+  .left .navbar-list {
+    padding: 0 0.8rem;
+  }
+  .left .navbar-list:last-of-type {
+    margin-top: unset;
+  }
+
+  .right .navbar-list:first-of-type {
+    padding-right: 2rem;
+  }
+  .right .navbar-list:last-of-type {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 1rem;
+  }
+  .navbar-menu ul {
+    align-items: center;
+    display: inline-flex;
+  }
+  .navbar-list {
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .navbar {
+    position: relative;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .left {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 6rem;
+  }
+  .left .navbar-list {
+    padding: 0 2rem;
+  }
+  .right {
+    padding-right: 5rem;
+  }
+  .navbar-menu ul {
+    align-items: center;
+    display: inline-flex;
+  }
+  .navbar-list {
+    padding: 0;
+  }
+
+  .container {
+    max-width: 90vw;
+    margin-inline: 5rem;
+  }
+  .hero {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: auto;
+    min-height: 100vh;
+  }
+  .desc {
+    text-align: left;
+    line-height: 2rem;
+  }
+  .desc h1 {
+    font-size: 5.5rem;
+    line-height: 5rem;
+  }
+  .desc p {
+    font-size: 1.5rem;
+  }
+  .image-hero {
+    grid-column-start: 2;
+  }
+  .image-hero img {
+    max-width: 1440px;
+  }
+  .desc {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+  .hero-client img {
+    width: 100px;
+    padding: 0 1rem;
+  }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="icon">
+          <img src="./images/logo.svg" alt="logo" />
+        </div>
+        <button
+          class="navbar-menu-toggle"
+          id="side-nav"
+          aria-controls="navbar-menu"
+          aria-expanded="false"
+        ></button>
+        <div class="navbar-menu" id="navbar-menu" data-visible="false">
+          <ul class="left">
+            <li class="navbar-list">
+              <span>Features</span
+              ><img src="./images/icon-arrow-down.svg" alt="" />
+              <ul class="dropdown">
+                <li>
+                  <img src="./images/icon-todo.svg" alt="" />
+                  <span>Todo List</span>
+                </li>
+                <li>
+                  <img src="./images/icon-calendar.svg" alt="" /><span
+                    >Calendar</span
+                  >
+                </li>
+                <li>
+                  <img src="./images/icon-reminders.svg" alt="" />
+                  <span>Reminders</span>
+                </li>
+                <li>
+                  <img src="./images/icon-planning.svg" alt="" />
+                  <span>Planning</span>
+                </li>
+              </ul>
+            </li>
+            <li class="navbar-list">
+              <span>Company</span
+              ><img src="./images/icon-arrow-down.svg" alt="" />
+              <ul class="dropdown">
+                <li>History</li>
+                <li>Our Team</li>
+                <li>Blog</li>
+              </ul>
+            </li>
+            <li class="navbar-list">Careers</li>
+            <li class="navbar-list">About</li>
+          </ul>
+          <ul class="right">
+            <li class="navbar-list">Login</li>
+            <li class="navbar-list">Register</li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="container">
+      <div class="hero">
+        <div class="image-hero">
+          <img src="images/image-hero-mobile.png" alt="hero image" />
+        </div>
+        <div class="desc">
+          <h1>Make remote work</h1>
+          <p>
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <button class="hero-btn">Learn more</button>
+        </div>
+        <div class="hero-client">
+          <img src="./images/client-databiz.svg" alt="databiz" />
+          <img src="./images/client-audiophile.svg" alt="audiophile" />
+          <img src="./images/client-meet.svg" alt="meet" />
+          <img src="./images/client-maker.svg" alt="maker" />
+        </div>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by<a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        >Frontend Mentor</a
+      >Coded by
+      <a href="https://github.com/babylittlepony">babylittlepony</a>
+    </div>
+  </body>
+</html>
