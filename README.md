@@ -69,7 +69,7 @@ also i want to take more harder challange next time on frontend mentor
 
 - [we3schools](https://www.w3schools.com)
 - [Kevin Powell](https://www.youtube.com/kepowob)
-- [Web Dev Simplivied](https://www.youtube.com/c/WebDevSimplified)
+- [Web Dev Simplified](https://www.youtube.com/c/WebDevSimplified)
 
 ## Author
 
